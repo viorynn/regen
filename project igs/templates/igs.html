@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGS Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f07e;
+        }
+        .letter {
+            font-size: 5rem;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 20px;
+            text-align: center;
+            color: black; /* Set the text color to black */
+        }
+        .I {
+            background-color: darkred;
+        }
+        .G {
+            background-color: darkblue;
+        }
+        .S {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    {% for letter in data %}
+        <div class="letter {{ letter }}">{{ letter }}</div>
+    {% endfor %}
+</body>
+</html>
